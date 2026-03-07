@@ -93,6 +93,7 @@ let menu, animate;
     accordionTriggerEl.addEventListener('show.bs.collapse', accordionActiveFunction);
     accordionTriggerEl.addEventListener('hide.bs.collapse', accordionActiveFunction);
   });
+  
 
   // Auto update layout based on screen size
   window.Helpers.setAutoUpdate(true);
@@ -116,3 +117,18 @@ let menu, animate;
   // Auto update menu collapsed/expanded based on the themeConfig
   window.Helpers.setCollapsed(true, false);
 })();
+
+function togglePassword() {
+  const input = document.getElementById("password_student");
+  const icon = document.getElementById("icon_eye_student");
+
+  if (input.type === "password") {
+    input.type = "text";
+    icon.classList.remove("bx-hide");
+    icon.classList.add("bx-show");
+  } else {
+    input.type = "password";
+    icon.classList.remove("bx-show");
+    icon.classList.add("bx-hide");
+  }
+}
