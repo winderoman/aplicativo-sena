@@ -8,7 +8,7 @@ function getToken(){
 
 function logout(){
     localStorage.removeItem("token");
-    window.location.href = "index.html";
+    window.location.href = "html/index.html";
 }
 
 
