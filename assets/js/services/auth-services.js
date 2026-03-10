@@ -61,9 +61,9 @@ async function loginStudent() {
 
         setToken(response.data.accessToken);
         alertControl('success',response.message);
-        setTimeout(() => {
-            window.location.href = "profile.html";
-        }, 1400);
+        // setTimeout(() => {
+        //     window.location.href = "profile.html";
+        // }, 1400);
     } catch (error) {
         alertControl('danger',error.message || 'Error al iniciar sesión.');
     }

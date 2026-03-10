@@ -24,25 +24,27 @@ const api = {
       console.log("💡API DATA: ", dataAPI );
       API_BASE = "https://aplicativo-sena-api.onrender.com/api/v1";
       const response = await fetch(API_BASE + url, options);
+      let responseAPI = await response.json();
       
       if(response.status === 401){
+        if(responseAPI.message == "Token requerido. Incluye: Authorization: Bearer <token>"){
+          console.warn("Sesión expirada");
 
-        console.warn("Sesión expirada");
+          logout();
 
-        logout();
-
-        return;
+          return;
+        }
       }
 
       if(!response.ok){
-        let errorData = await response.json();
-        console.error("💡API Error: ",errorData);
-        return errorData;
+        //let responseAPI = await response.json();
+        console.error("💡API Error: ",responseAPI);
+        return responseAPI;
       }
       
-      let data =  await response.json();
-      console.log("💡API Response: ",data);
-      return data;
+      //let data =  await response.json();
+      console.log("💡API Response: ",responseAPI);
+      return responseAPI;
 
     }catch(error){
 
