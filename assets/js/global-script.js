@@ -1,3 +1,4 @@
+let BASE_URL_FRONT = "https://winderoman.github.io/aplicativo-sena";
 function setToken(token){
    localStorage.setItem("token", token);
 }
@@ -8,7 +9,7 @@ function getToken(){
 
 function logout(){
     localStorage.removeItem("token");
-    window.location.href = "html/index.html";
+    window.location.href = BASE_URL_FRONT + "/html/index.html";
 }
 
 
@@ -31,7 +32,7 @@ function checkAuth(){
   const token = getToken();
 
   if (!token) {
-    window.location.href = "/index.html";
+    window.location.href = BASE_URL_FRONT + "/html/index.html";
     return false;
   }
 
