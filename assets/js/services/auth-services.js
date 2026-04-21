@@ -1,9 +1,9 @@
 'use strict';
 
-async function registerStudent(this) {
-    this.disabled = true; // Deshabilitar el botón para evitar múltiples clics
+async function registerStudent(thisbtn) {
+    thisbtn.disabled = true; // Deshabilitar el botón para evitar múltiples clics
     setTimeout(() => {
-        this.disabled = false; // Rehabilitar el botón después de 3 segundos
+        thisbtn.disabled = false; // Rehabilitar el botón después de 3 segundos
     }, 3000);
     
     const formRegisterStudent = document.getElementById('formRegisterStudent');
@@ -44,10 +44,10 @@ async function registerStudent(this) {
     $("#modalRegistroAprendiz").modal('hide');
 }
 
-async function loginStudent(this) {
-    this.disabled = true; // Deshabilitar el botón para evitar múltiples clics
+async function loginStudent(thisbtn) {
+    thisbtn.disabled = true; // Deshabilitar el botón para evitar múltiples clics
     setTimeout(() => {
-        this.disabled = false; // Rehabilitar el botón después de 3 segundos
+        thisbtn.disabled = false; // Rehabilitar el botón después de 3 segundos
     }, 3000);
     const formLoginStudent = document.getElementById('FormLoginStudent');
     const formData = new FormData(formLoginStudent);
