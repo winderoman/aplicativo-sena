@@ -70,7 +70,7 @@ async function loginStudent(thisButton) {
         setToken(response.data.accessToken);
         alertControl('success',response.message);
         setTimeout(() => {
-            window.location.href = BASE_URL_FRONT + "/html/profile.html";
+            window.location.href = api.BASE_URL_FRONT + "/html/profile.html";
         }, 1400);
     } catch (error) {
         alertControl('danger',error.message || 'Error al iniciar sesión.');
