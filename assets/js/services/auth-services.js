@@ -44,10 +44,11 @@ async function registerStudent(thisbtn) {
     $("#modalRegistroAprendiz").modal('hide');
 }
 
-async function loginStudent(thisbtn) {
-    thisbtn.disabled = true; // Deshabilitar el botón para evitar múltiples clics
+async function loginStudent(thisButton) {
+    // deshabilitar el botón para evitar múltiples clics
+    thisButton.disabled = true;
     setTimeout(() => {
-        thisbtn.disabled = false; // Rehabilitar el botón después de 3 segundos
+        thisButton.disabled = false;
     }, 3000);
     const formLoginStudent = document.getElementById('FormLoginStudent');
     const formData = new FormData(formLoginStudent);
