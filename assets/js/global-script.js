@@ -1,5 +1,5 @@
 //let BASE_URL_FRONT = "https://winderoman.github.io/aplicativo-sena";
-let BASE_URL_FRONT = "http://localhost:5500";
+let BASE_URL_FRONT = api.API_BASE;
 function setToken(token){
    localStorage.setItem("token", token);
 }
