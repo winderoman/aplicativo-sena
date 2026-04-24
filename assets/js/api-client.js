@@ -1,6 +1,7 @@
 const api = {
   //API_BASE: "http://localhost:3000/api",
   API_BASE: "https://aplicativo-sena-api.onrender.com/api",
+  BASE_URL_FRONT: "https://winderoman.github.io/aplicativo-sena",
  async request(url, options = {}){
 
     try{
