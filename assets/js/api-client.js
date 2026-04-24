@@ -1,4 +1,6 @@
 const api = {
+  //API_BASE: "http://localhost:3000/api",
+  API_BASE: "https://aplicativo-sena-api.onrender.com/api",
  async request(url, options = {}){
 
     try{
@@ -22,9 +24,9 @@ const api = {
 
       console.log("💡API URL: ",url);
       console.log("💡API DATA: ", dataAPI );
-      //API_BASE = "https://aplicativo-sena-api.onrender.com/api/v1";
-      API_BASE = "http://localhost:3000/api";
-      const response = await fetch(API_BASE + url, options);
+      
+      
+      const response = await fetch(this.API_BASE + url, options);
       let responseAPI = await response.json();
       
       if(response.status === 401){
